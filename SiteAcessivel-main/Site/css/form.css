@@ -1,0 +1,348 @@
+@import "../css/global.css"; /* Variaveis */
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+a{
+    text-decoration: none;
+    color: inherit;
+}
+
+#contato {
+    width: 50%;
+    height: 100vh;
+    background: var(--bg_form_left);
+}
+
+#contato-container {
+    height: 100vh;
+    padding: 30% 100px;
+    margin-right: 0;
+}
+
+#contato-container h1{
+    font-size: 3rem;
+    padding: 15px 0;
+    font-weight: bold;
+    font-family: arial;
+}
+
+#contato-container p {
+    font-size: 15px;
+    font-family: georgia;
+}
+#contato-container ul {
+    font-size: 30px;
+    display: flex;
+    list-style: none;
+    padding: 15px 0;
+    justify-content: flex-start;
+    letter-spacing: 20px;
+}
+
+#contato-body {
+    width: 100%;
+    height: 100%;
+    
+}
+
+/* Formulario */
+form{
+    /* background: var(--bg_form_right); */
+}
+
+#form-body-el {
+    background-color: rgb(30, 72, 94);
+    background: url('../imagens/plataforma.jpg') no-repeat center center/cover;
+    position: relative;
+    opacity: 1;
+}
+
+
+#form-container {
+    height: fit-content;
+    max-width: 55%;
+    margin: 2.5% auto auto;
+    padding: 4%;
+    border-radius: 1.5%;
+    background-color: rgb(37 86 111);
+    filter:opacity(97%)
+}
+
+#form-container h2{
+    font-size: 2.8rem;
+    margin-bottom: 4%;
+    font-family: Arial, Helvetica, sans-serif;
+    color: var(--fundo_nav);
+}
+
+#form-container label {
+    font-size: 1rem;
+    font-family: georgia;
+    font-weight: bold;
+    color: var(--fundo_nav);
+}
+
+input,
+textarea {
+    width: 100%;
+    padding: 8px;
+    font-size: 1.2rem;
+    border: 0;
+    border-bottom: 2px solid var(--fundo_nav);
+    border-radius: 0; /* Remove border-radius for a flat design */
+    background: rgba(255, 255, 255, 0); /* Fully transparent background */
+}
+
+input::placeholder,
+textarea::placeholder {
+    color: var(--fundo_nav);
+}
+
+input:focus,
+textarea:focus {
+    outline: none; 
+}
+
+input::placeholder,
+textarea::placeholder {
+    transition: color 0.2s; 
+}
+
+input:focus::placeholder,
+textarea:focus::placeholder {
+    color: transparent; 
+}
+
+#mensagem {
+    width: 100%;
+    height: 180px;
+    resize: none;
+    border: 2px solid var(--fundo_nav);
+    background: rgba(255, 255, 255, 0); /* Fully transparent background */
+}
+
+.btn input {
+    width: 15%;
+    font-size: 0.9rem;
+    font-family: georgia;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 10px;
+    background: var(--fundo_nav);
+    animation-duration: 0.2s; 
+    color: rgb(37 86 111);
+    letter-spacing: 0.10em;
+}
+
+.btn input:hover {
+    transform: translateY(-5px);
+    box-shadow: 2px 2px 5px #111;
+}
+
+.input-alone {
+    position: relative;
+    margin: 7% 0;
+}
+
+.input-textarea {
+    margin: 10% 0 !important;
+}
+
+.input-alone label {
+    position: absolute;
+    left: 0;
+    bottom: 5px;
+    transition: all 0.2s;
+    cursor: text;
+}
+
+
+/* Ação aplicada com o user interagindo na caixa de texto mas aplicada no label */
+.input-alone input:focus ~ label,
+.input-alone input:valid ~ label
+{
+    transform: translateY(-35px);
+    color: #62626296;
+    font-size: 12px;
+}
+
+.input-alone textarea:focus ~ label
+{
+    transform: translateY(-182px);
+    color: #62626296;
+    font-size: 12px;
+}
+
+.input-label {
+    margin-left: 2%;
+}
+
+@media screen and (max-width: 1330px) {
+    #contato{
+        display: none;
+    }
+
+    form {
+        width: 100%;
+        height: auto;
+    }
+    form h2{
+        text-align: center;
+    }
+
+    #form-container h2 {
+        margin-bottom: 0%;
+    }
+
+    .btn input{
+        font-size: 1rem;
+        width: 100px;
+    }
+}
+
+@media screen and (max-width: 1030px){
+    #contato-container{
+        display: none;
+    }
+    form{
+        width: 100%;
+        height: auto;
+    }
+
+    #form-container {
+        max-width: 80%;
+    }
+
+    #form-container h2 {
+        font-size: 1.8rem;
+        margin: 0%;
+    }
+
+    .inputs{
+        flex-direction: column;
+        flex-wrap: nowrap;
+        max-height: 40rem;
+        padding: 20px;
+        margin: none;
+    }
+
+    #form-container label {
+        font-size: 0.8rem;
+    }
+
+    #mensagem {
+        height: 120px
+    }
+
+    .input-alone {
+        margin: 5% auto;
+    }
+}
+
+@media screen and (max-width: 850px){
+    #form-container h2 {
+        font-size: 1.3rem;
+        margin: none;
+    }
+
+    #mensagem {
+        height: 80px
+    }
+
+    #form-container label {
+        font-size: 0.8rem;
+    }
+
+    .input-alone {
+        margin: 3% auto;
+    }
+ }
+
+ @media screen and (max-width: 7000px){
+    #form-container h2 {
+        font-size: 1.2rem;
+        margin: none;
+    }
+
+ }
+
+ @media screen and (max-height: 610px){
+    .inputs{
+        flex-direction: column;
+        overflow-y: scroll;
+        flex-wrap: nowrap;
+        max-height: 17rem;
+        padding: 20px;
+        margin: none;
+    }
+ }
+
+ @media screen and (max-height: 510px){
+    .inputs{
+        flex-direction: column;
+        overflow-y: scroll;
+        flex-wrap: nowrap;
+        max-height: 12rem;
+        padding: 20px;
+        margin: none;
+    }
+ }
+
+ @media screen and (max-height: 430px){
+    .inputs{
+        flex-direction: column;
+        overflow-y: scroll;
+        flex-wrap: nowrap;
+        max-height: 8rem;
+        padding: 20px;
+        margin: none;
+    }
+ }
+
+ @media screen and (max-height: 355px){
+    .inputs{
+        flex-direction: column;
+        overflow-y: scroll;
+        flex-wrap: nowrap;
+        max-height: 5rem;
+        padding: 20px;
+        margin: none;
+    }
+ }
+
+ @media screen and (max-height: 310px){
+    .inputs{
+        flex-direction: column;
+        overflow-y: scroll;
+        flex-wrap: nowrap;
+        max-height: 2.5rem;
+        padding: 20px;
+        margin: none;
+    }
+ }
+
+ @media screen and (max-height: 310px){
+    .inputs{
+        flex-direction: column;
+        overflow-y: scroll;
+        flex-wrap: nowrap;
+        max-height: 2.5rem;
+        padding: 20px;
+        margin: none;
+    }
+ }
+
+ @media screen and (max-height: 290px){
+    .inputs{
+        flex-direction: column;
+        overflow-y: scroll;
+        flex-wrap: nowrap;
+        max-height: 1.5rem;
+        padding: 20px;
+        margin: none;
+    }
+ }
