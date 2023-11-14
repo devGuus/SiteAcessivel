@@ -1,13 +1,12 @@
 #navbar {
     width: 100%;
     height: 65px;
-    background: var(--fundo_nav);
+    background: #3673d0;
     color: var(--txt);
     /* position: fixed; */
-    border-radius: 5px;
 }
 
-.logo { 
+.logo {
     width: 100px;
 }
 

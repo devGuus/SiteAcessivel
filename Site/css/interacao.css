@@ -1,13 +1,23 @@
 /* interacao */
 .interacao {
-    height: 85vh;
-    background: rgb(0, 0, 0);
+    height: 100vh;
+    background: #fffcf6;
     color: white;
 }
 
-.interacao .titles{
+label{
+    color: #514d4d;
+}
+
+.intIten {
+    height: 80vh;
+    padding: 10px 20px;
+}
+
+.interacao .titles {
     padding: 20px 0;
     font-size: 2.1rem;
+    color: black;
 }
 
 #interacao-container label {
@@ -17,7 +27,8 @@
 }
 
 #btn-selecionado {
-    width: 30vh; /* Tamanho do input */
+    width: 30vh;
+    /* Tamanho do input */
     margin-top: .5rem;
     display: flex;
     padding: 0.75rem;
@@ -29,7 +40,7 @@
     background-color: #17171A;
 }
 
-#setas i{
+#setas i {
     width: 1rem;
     height: 1rem;
 }
@@ -38,26 +49,26 @@
     color: #eee;
 }
 
-#setas [class="fa-solid fa-chevron-up"]{
-    display: none;  
+#setas [class="fa-solid fa-chevron-up"] {
+    display: none;
 }
 
 /*Cor após select*/
-#estados:focus + #btn-selecionado,
-#estados:checked + #btn-selecionado{
+#estados:focus+#btn-selecionado,
+#estados:checked+#btn-selecionado {
     outline: 1px solid #A881E6;
 }
 
 #interacao-container:has(#estados:checked) label,
-#estados:checked + #btn-selecionado #setas {
+#estados:checked+#btn-selecionado #setas {
     color: #A881E6;
 }
 
-#estados:checked + #btn-selecionado #setas [class="fa-solid fa-chevron-down"] {
+#estados:checked+#btn-selecionado #setas [class="fa-solid fa-chevron-down"] {
     display: none;
 }
 
-#estados:checked + #btn-selecionado #setas [class="fa-solid fa-chevron-up"] {
+#estados:checked+#btn-selecionado #setas [class="fa-solid fa-chevron-up"] {
     display: block;
 }
 
@@ -92,11 +103,12 @@
     border-bottom: 1px solid #252529;
 }
 
-.opcao .label{
+.opcao .label {
     color: #FBF9FE;
 }
 
-.opcao i{ /* Tamanho do icone check */
+.opcao i {
+    /* Tamanho do icone check */
     width: 1rem;
     height: 1rem;
 }
@@ -106,6 +118,7 @@
     color: #A881E6;
     display: none;
 }
+
 /* Seleção da caixa */
 .opcao:has(input:checked),
 .opcao:hover {
@@ -117,22 +130,24 @@
     outline: 1px solid #A881E6;
 }
 
-.opcao:has(input:checked) #check{
+.opcao:has(input:checked) #check {
     display: block;
 }
+
 /* Opção de clicar em qualquer lugar da caixa */
-.opcao input[type="radio"]{
+.opcao input[type="radio"] {
     all: unset;
     position: absolute;
     inset: 0;
     cursor: pointer;
 }
+
 /* Fechar e abrir caixa */
-#interacao-container:has(#estados:checked) + #opcoes{
+#interacao-container:has(#estados:checked)+#opcoes {
     display: block;
 }
 
-.interacao:has(.opcao input:checked) #interacao-container label{
+.interacao:has(.opcao input:checked) #interacao-container label {
     color: #A881E6;
 }
 

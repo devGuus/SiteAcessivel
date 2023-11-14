@@ -10,7 +10,7 @@
 
 #tools {
     width: 100%;
-    background: #fff;
+    background: #fffcf6;
     color: #111;
     padding: 50px;
 }
@@ -27,6 +27,10 @@
 .toolsIcons {
     display: inline-block;
     width: 25%;
+}
+
+.toolsIcons:hover {
+    transform: translateY(-15px);
 }
 
 /* Projeto */
@@ -54,7 +58,7 @@
 .frames {
     display: inline;
     flex-direction: column;
-    background: #333;
+    background: #3673d0;
     padding: 20px;
     border-radius: 5px;
 }
@@ -71,6 +75,7 @@
 #code {
     width: 100%;
     padding: 50px;
+    background: #fffcf6;
 }
 
 #code-container {
@@ -157,12 +162,21 @@
     flex-direction: row-reverse;
 }
 
+.aluno-nome i {
+    padding: .2rem;
+}
+
+.aluno-nome p {
+    padding: .2rem;
+}
+
 /* Fotos */
 
 #imagens {
-    width: 90%;
+    width: 100%;
     margin: auto;
     padding: 50px;
+    background-color: var(--fundo_section);
 }
 
 #imagens-container {
@@ -178,10 +192,11 @@
     height: 280px;
     border-radius: 5px;
 }
+
 /* Footer */
 #footer {
     display: flex;
-    background: var(--fundo_section);
+    background: #393939;
     color: #eee;
     padding: 30px;
     flex-direction: column;

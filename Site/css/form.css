@@ -1,12 +1,13 @@
-@import "../css/global.css"; /* Variaveis */
+@import "../css/global.css";
+/* Variaveis */
 
-*{
+* {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
 }
 
-a{
+a {
     text-decoration: none;
     color: inherit;
 }
@@ -24,7 +25,7 @@ a{
     margin-right: 30%;
 }
 
-#contato-container h1{
+#contato-container h1 {
     font-size: 3rem;
     padding: 15px 0;
     font-weight: bold;
@@ -35,6 +36,7 @@ a{
     font-size: 15px;
     font-family: georgia;
 }
+
 #contato-container ul {
     font-size: 30px;
     display: flex;
@@ -43,24 +45,36 @@ a{
     justify-content: flex-start;
     letter-spacing: 20px;
 }
+
+#contato-container li i:hover {
+    cursor: pointer;
+    color: rgb(0, 115, 255);
+    font-size: 2rem;
+}
+
+#contato-container .social-icons {
+    display: flex;
+}
+
 /* Formulario */
-form{
+form {
     width: 50%;
     height: 100vh;
     position: absolute;
     right: 0;
     /* background: var(--bg_form_right); */
 }
+
 #form-container {
     height: 100vh;
     padding: 20% 100px;
 }
 
-#form-container h2{
+#form-container h2 {
     font-size: 2.8rem;
 }
 
-#form-container label{
+#form-container label {
     font-size: 1rem;
     font-family: georgia;
     font-weight: bold;
@@ -70,7 +84,7 @@ form{
     padding: 20px 0px;
 }
 
-input{
+input {
     width: 100%;
     padding: 8px;
     font-size: 1.2rem;
@@ -80,7 +94,7 @@ input{
     background: var(--bg_form_right);
 }
 
-#mensagem{
+#mensagem {
     width: 100%;
     height: 180px;
     resize: none;
@@ -88,7 +102,7 @@ input{
     background: var(--bg_form_right);
 }
 
-.btn input{
+.btn input {
     width: 15%;
     margin-top: 50px;
     font-size: 0.9rem;
@@ -98,15 +112,15 @@ input{
     border-radius: 10px;
     background: #eee;
 
-    animation-duration: 0,2s;
+    animation-duration: 0, 2s;
 }
 
-.btn input:hover{
+.btn input:hover {
     transform: translateY(-5px);
     box-shadow: 2px 2px 5px #111;
 }
 
-.input-alone{
+.input-alone {
     position: relative;
     margin: 30px 0;
 }
@@ -118,24 +132,23 @@ input{
     transition: all 0.2s;
     cursor: text;
 }
+
 /* Ação aplicada com o user interagindo na caixa de texto mas aplicada no label */
-.input-alone input:focus ~ label,
-.input-alone input:valid ~ label
-{
+.input-alone input:focus~label,
+.input-alone input:valid~label {
     transform: translateY(-35px);
     color: #62626296;
     font-size: 12px;
 }
 
-.input-alone textarea:focus ~ label
-{
+.input-alone textarea:focus~label {
     transform: translateY(-182px);
     color: #62626296;
     font-size: 12px;
 }
 
 @media screen and (max-width: 1330px) {
-    #contato{
+    #contato {
         display: none;
     }
 
@@ -143,26 +156,28 @@ input{
         width: 100%;
         height: auto;
     }
-    form h2{
+
+    form h2 {
         text-align: center;
     }
 
-    .btn input{
+    .btn input {
         font-size: 1rem;
         width: 100px;
     }
 }
 
-@media screen and (max-width: 1030px){
-    #contato-container{
+@media screen and (max-width: 1030px) {
+    #contato-container {
         display: none;
     }
-    form{
+
+    form {
         width: 100%;
         height: auto;
     }
 
-    .inputs{
+    .inputs {
         flex-direction: column;
         overflow-y: scroll;
         flex-wrap: nowrap;
